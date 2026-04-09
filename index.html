@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokhara Online Store</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f5f5f5;
+    }
+    header {
+      background: black;
+      color: white;
+      padding: 10px;
+    }
+    .banner {
+      background: orange;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .product {
+      background: white;
+      margin: 10px;
+      padding: 10px;
+      display: inline-block;
+      border-radius: 10px;
+      width: 150px;
+    }
+    button {
+      padding: 5px 10px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Pokhara Online Store</h1>
+</header>
+
+<div class="banner">
+  🚀 30-Minute Delivery in Pokhara
+</div>
+
+<h2>Products</h2>
+
+<div class="product">
+  <h3>Rice</h3>
+  <p>Rs 500</p>
+  <button onclick="addToCart(500)">Add</button>
+</div>
+
+<div class="product">
+  <h3>Milk</h3>
+  <p>Rs 100</p>
+  <button onclick="addToCart(100)">Add</button>
+</div>
+
+<div class="product">
+  <h3>Bread</h3>
+  <p>Rs 80</p>
+  <button onclick="addToCart(80)">Add</button>
+</div>
+
+<h2 id="total">Total: Rs 0</h2>
+
+<button onclick="delivery()">Calculate Delivery</button>
+<p id="delivery"></p>
+
+<h2>Payment</h2>
+<p>Scan QR or Pay Cash</p>
+
+<img src="qr.png" width="200">
+<p>(Replace with your eSewa/Khalti QR)</p>
+
+<script>
+let total = 0;
+
+function addToCart(price) {
+  total += price;
+  document.getElementById("total").innerText = "Total: Rs " + total;
+}
+
+function delivery() {
+  let cost = 50;
+  document.getElementById("delivery").innerText = "Delivery: Rs " + cost;
+}
+</script>
+
+</body>
+</html>
